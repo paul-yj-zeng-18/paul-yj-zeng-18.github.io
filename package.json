@@ -1,0 +1,15 @@
+{
+  "name": "paul-yj-zeng-18.github.io",
+  "private": true,
+  "type": "module",
+  "description": "Personal website of Paul Zeng, generated from profile.json",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "todos": "node scripts/todos.mjs",
+    "check": "node scripts/todos.mjs --strict"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "_readme": "Single source of truth for the site (and later the résumé). Any string starting with 'TODO' is a placeholder: it renders with a dashed outline and is listed by `npm run todos`. Set \"hidden\": true on an item to keep it in the data but off the page.",
+  "name": "Paul Zeng",
+  "fullName": "Yujie (Paul) Zeng",
+  "headline": "CS + Applied Math @ UC Berkeley",
+  "tagline": "ML for the sciences, built on rigorous math.",
+  "location": "Berkeley, CA",
+  "photo": "TODO: decide photo or text-only (open decision)",
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/paul-yj-zeng-18"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/yujie-zeng-a40a3b362/"
+    },
+    {
+      "label": "Email",
+      "url": "TODO: which address to show (last CV used paul_yj_zeng@berkeley.edu)"
+    },
+    {
+      "label": "CV",
+      "url": "TODO: add cv.pdf to public/ and set this to /cv.pdf"
+    }
+  ],
+  "about": "I'm Paul Zeng, a CS and Applied Mathematics student at UC Berkeley (class of 2029). I came to ML through competitive programming and math, and I care about understanding why methods work, not just that they run. I'm building toward ML for scientific problems, especially physics, while shipping agents and tools on the side.",
+  "now": {
+    "updated": "2026-10-21",
+    "items": [
+      "Taking probability (EECS 126), PDEs (Math 126) and Physics 7B, and following Berkeley's machine learning course (CS 189).",
+      "Building Second Self, an AI agent that models a person's habits and handles their admin work.",
+      "Heading to Immerse the Bay, Stanford's XR hackathon, in November."
+    ]
+  },
+  "research": [
+    {
+      "dates": "2023 – 2024",
+      "title": "Deep-learning-based regional carbon emission prediction",
+      "org": "University of Electronic Science and Technology of China (UESTC)",
+      "role": "Research Assistant, advised by Prof. Wang",
+      "summary": "Forecast regional carbon emissions with linear regression, ARIMA and LSTM models, compared and tuned them to show long-term trends.",
+      "tags": [
+        "LSTM",
+        "ARIMA",
+        "Time series",
+        "Python"
+      ],
+      "result": "TODO: headline result (accuracy, finding, or output)",
+      "link": "TODO: report or paper link, or remove"
+    }
+  ],
+  "interests": [
+    "ML for the physical sciences, where rigorous math is an advantage",
+    "AI for science more broadly, including computational biology",
+    "Agents and personalization: AI that models a person and acts on their behalf",
+    "AR/VR as the next interface for bringing AI into daily life"
+  ],
+  "projects": [
+    {
+      "title": "Second Self",
+      "status": "TODO: status (e.g. MVP in progress)",
+      "summary": "An AI agent that models a user's habits and handles their administrative work, starting from résumé generation. Built with a collaborator and grounded in personalization research (MemGPT, Generative Agents, LaMP).",
+      "tags": [
+        "TODO: stack"
+      ],
+      "link": "TODO: link or remove"
+    },
+    {
+      "title": "Personal agents and automation",
+      "status": "Ongoing",
+      "summary": "TODO: what you've built (calendar / Notion / Gmail agents, MCP servers) in one sentence",
+      "tags": [
+        "TODO: stack"
+      ],
+      "link": "TODO: link or remove"
+    },
+    {
+      "title": "JVibe home automation",
+      "status": "TODO: status",
+      "summary": "TODO: what JVibe does in practice (IR blaster + smart plugs controlling the apartment)",
+      "tags": [
+        "Broadlink RM4",
+        "Kasa",
+        "TODO: stack"
+      ],
+      "link": "TODO: link or remove"
+    },
+    {
+      "title": "Immerse the Bay 2026",
+      "status": "Nov 13–15, 2026",
+      "summary": "Stanford XR hackathon, theme \"Take Me To The Moon\". Project details after the event.",
+      "tags": [
+        "XR"
+      ],
+      "link": "TODO: project link after the event"
+    },
+    {
+      "hidden": true,
+      "title": "Mirror",
+      "status": "Open decision",
+      "summary": "A personalized chatbot fine-tuned on chat history that replies to messages on your behalf. Hidden until you decide whether to show it (it involves other people's messages).",
+      "tags": [],
+      "link": ""
+    }
+  ],
+  "education": [
+    {
+      "dates": "2025 – 2029",
+      "title": "University of California, Berkeley",
+      "detail": "B.A. Computer Science; Applied Mathematics (declaration pending)"
+    },
+    {
+      "dates": "Summer 2024",
+      "title": "Carnegie Mellon University",
+      "detail": "Pre-college program, Computer Science and Mathematics"
+    },
+    {
+      "hidden": true,
+      "dates": "2021 – 2025",
+      "title": "Minhang Crosspoint Academy, Shanghai Wenqi Private Middle School",
+      "detail": "High school diploma"
+    }
+  ],
+  "coursework": {
+    "note": "Took Math 104, 110 and 113 in the same semester.",
+    "showGrades": false,
+    "groups": [
+      {
+        "label": "Math",
+        "courses": [
+          {
+            "code": "Math 54",
+            "name": "Linear Algebra & Differential Equations",
+            "grade": "A+"
+          },
+          {
+            "code": "Math 104",
+            "name": "Real Analysis"
+          },
+          {
+            "code": "Math 110",
+            "name": "Abstract Linear Algebra"
+          },
+          {
+            "code": "Math 113",
+            "name": "Abstract Algebra"
+          },
+          {
+            "code": "Math 126",
+            "name": "Partial Differential Equations",
+            "current": true
+          }
+        ]
+      },
+      {
+        "label": "CS / EECS",
+        "courses": [
+          {
+            "code": "CS 61A",
+            "name": "Structure and Interpretation of Computer Programs",
+            "grade": "A+"
+          },
+          {
+            "code": "CS 61B",
+            "name": "Data Structures"
+          },
+          {
+            "code": "CS 70",
+            "name": "Discrete Mathematics & Probability",
+            "grade": "A+"
+          },
+          {
+            "code": "Data C8",
+            "name": "Foundations of Data Science",
+            "grade": "A+"
+          },
+          {
+            "code": "EECS 126",
+            "name": "Probability & Random Processes",
+            "current": true
+          },
+          {
+            "code": "CS 189",
+            "name": "Machine Learning (following lectures)",
+            "current": true
+          }
+        ]
+      },
+      {
+        "label": "Physics",
+        "courses": [
+          {
+            "code": "Physics 7B",
+            "name": "Physics for Scientists and Engineers",
+            "current": true
+          }
+        ]
+      }
+    ]
+  },
+  "honors": [
+    {
+      "dates": "2024",
+      "title": "USA Computing Olympiad (USACO)",
+      "detail": "Platinum Division"
+    },
+    {
+      "dates": "2024",
+      "title": "American Invitational Mathematics Examination (AIME)",
+      "detail": "Qualifier, score 8"
+    },
+    {
+      "dates": "2024",
+      "title": "International Mathematical Modeling Challenge (IMMC)",
+      "detail": "Honorable Mention"
+    }
+  ],
+  "activities": [
+    {
+      "dates": "Fall 2026",
+      "title": "Discussion leader, Global 123L",
+      "detail": "UC Berkeley"
+    },
+    {
+      "dates": "2022 – 2023",
+      "title": "Linguistics Club",
+      "detail": "Trained for the International Linguistics Olympiad"
+    }
+  ],
+  "skills": [
+    {
+      "label": "Programming",
+      "items": [
+        "Python",
+        "C++",
+        "Java"
+      ]
+    },
+    {
+      "label": "ML and tools",
+      "items": [
+        "PyTorch",
+        "NumPy",
+        "Jupyter",
+        "Git"
+      ]
+    },
+    {
+      "label": "Math",
+      "items": [
+        "Real analysis",
+        "Linear and abstract algebra",
+        "Probability",
+        "PDEs"
+      ]
+    },
+    {
+      "label": "Languages",
+      "items": [
+        "Chinese (native)",
+        "English (fluent)"
+      ]
+    }
+  ],
+  "personal": "From Shanghai. I hike on weekends and spent years training in drawing as a kid.",
+  "site": {
+    "url": "https://paul-yj-zeng-18.github.io",
+    "description": "Paul Zeng: CS + Applied Math at UC Berkeley, working where machine learning, mathematics and the physical sciences meet."
+  }
+}
