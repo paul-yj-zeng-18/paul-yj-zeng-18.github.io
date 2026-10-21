@@ -92,10 +92,23 @@ ul.plain li { margin: 4px 0; font-size: 15px; }
 ul.plain li::marker { color: var(--steel); }
 
 .courses { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px 28px; margin-bottom: 10px; }
-.courses ul.plain { list-style: none; padding: 0; }
-.group { font-family: var(--mono); font-size: 12px; color: var(--steel); text-transform: uppercase; letter-spacing: .08em; margin: 8px 0 2px; }
-.code { font-family: var(--mono); font-size: 13px; white-space: nowrap; }
-.pill, .grade { font-family: var(--mono); font-size: 11px; color: var(--steel); border: 1px solid var(--hair); border-radius: 3px; padding: 0 4px; }
+.group { font-family: var(--mono); font-size: 12px; color: var(--steel); text-transform: uppercase; letter-spacing: .08em; margin: 0 0 6px; }
+
+/* Coursework: the lead section, so it gets full-width rows and visible grades. */
+.cw-intro { font-size: 15px; margin-bottom: 18px; }
+.cw-group { margin-bottom: 26px; }
+.cw-table { width: 100%; border-collapse: collapse; }
+.cw-table tr { border-top: 1px solid var(--hair); }
+.cw-table tr:last-child { border-bottom: 1px solid var(--hair); }
+.cw-table th, .cw-table td { padding: 10px 0; vertical-align: baseline; text-align: left; font-weight: 400; }
+.cw-table .code { font-family: var(--mono); font-size: 14px; font-weight: 500; white-space: nowrap; width: 104px; padding-right: 16px; }
+.cw-table .name { font-size: 16px; }
+.cw-table .mark { text-align: right; white-space: nowrap; padding-left: 16px; }
+.grade { font-family: var(--mono); font-size: 17px; font-weight: 500; letter-spacing: .02em; }
+.inprog { font-family: var(--mono); font-size: 12px; color: var(--steel); }
+.cw-table tr.current .name { color: var(--steel); }
+.cw-note { font-size: 15px; font-weight: 500; padding: 12px 0 0; margin: 0; position: relative; }
+.cw-note::before { content: ""; display: block; width: 48px; height: 1px; background: var(--metal); margin-bottom: 12px; }
 
 .skills { display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: 8px 20px; margin: 0; font-size: 15px; }
 .skills dt { font-family: var(--mono); font-size: 13px; color: var(--steel); padding-top: 1px; }

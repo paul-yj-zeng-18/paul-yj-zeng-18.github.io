@@ -84,7 +84,8 @@
         "Kasa",
         "TODO: stack"
       ],
-      "link": "TODO: link or remove"
+      "link": "TODO: link or remove",
+      "hidden": true
     },
     {
       "title": "Immerse the Bay 2026",
@@ -93,7 +94,8 @@
       "tags": [
         "XR"
       ],
-      "link": "TODO: project link after the event"
+      "link": "TODO: project link after the event",
+      "hidden": true
     },
     {
       "hidden": true,
@@ -123,8 +125,9 @@
     }
   ],
   "coursework": {
+    "intro": "Selected UC Berkeley courses.",
     "note": "Took Math 104, 110 and 113 in the same semester.",
-    "showGrades": false,
+    "showGrades": true,
     "groups": [
       {
         "label": "Math",
@@ -136,15 +139,18 @@
           },
           {
             "code": "Math 104",
-            "name": "Real Analysis"
+            "name": "Real Analysis",
+            "grade": "TODO: grade"
           },
           {
             "code": "Math 110",
-            "name": "Abstract Linear Algebra"
+            "name": "Abstract Linear Algebra",
+            "grade": "TODO: grade"
           },
           {
             "code": "Math 113",
-            "name": "Abstract Algebra"
+            "name": "Abstract Algebra",
+            "grade": "TODO: grade"
           },
           {
             "code": "Math 126",
@@ -163,7 +169,8 @@
           },
           {
             "code": "CS 61B",
-            "name": "Data Structures"
+            "name": "Data Structures",
+            "grade": "TODO: grade"
           },
           {
             "code": "CS 70",
@@ -220,7 +227,8 @@
     {
       "dates": "Fall 2026",
       "title": "Discussion leader, Global 123L",
-      "detail": "UC Berkeley"
+      "detail": "UC Berkeley",
+      "hidden": true
     },
     {
       "dates": "2022 – 2023",

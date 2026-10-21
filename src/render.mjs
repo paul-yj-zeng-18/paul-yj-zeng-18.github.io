@@ -63,11 +63,12 @@ export function render(p) {
   const nav = [
     ["about", "About"],
     ["now", "Now"],
+    ["coursework", "Coursework"],
+    ["skills", "Skills"],
+    ["honors", "Honors"],
+    ["education", "Education"],
     ["research", "Research"],
     ["projects", "Projects"],
-    ["education", "Education"],
-    ["honors", "Honors"],
-    ["skills", "Skills"],
   ];
 
   const now = section(
@@ -107,29 +108,45 @@ export function render(p) {
       .join("")
   );
 
+  // Coursework is the lead section: one row per course, grade on the right.
   const cw = p.coursework;
-  const course = (c) =>
-    `<li><span class="code">${esc(c.code)}</span> ${t(c.name)}${
-      c.current ? ' <span class="pill">now</span>' : ""
-    }${cw.showGrades && c.grade && !isTodo(c.grade) ? ` <span class="grade">${esc(c.grade)}</span>` : ""}</li>`;
+  const gradeCell = (c) => {
+    if (c.current) return `<span class="inprog">In progress</span>`;
+    if (!cw.showGrades || !c.grade) return "";
+    return isTodo(c.grade) ? t(c.grade) : `<span class="grade">${esc(c.grade)}</span>`;
+  };
+  const courseRow = (c) => `
+          <tr${c.current ? ' class="current"' : ""}>
+            <th scope="row" class="code">${esc(c.code)}</th>
+            <td class="name">${t(c.name)}</td>
+            <td class="mark">${gradeCell(c)}</td>
+          </tr>`;
+
+  const coursework = section(
+    "coursework",
+    "Coursework",
+    `${cw.intro ? `<p class="cw-intro">${t(cw.intro)}</p>` : ""}
+      ${cw.groups
+        .map(
+          (g) => `
+      <div class="cw-group">
+        <p class="group">${esc(g.label)}</p>
+        <table class="cw-table">
+          <tbody>${visible(g.courses).map(courseRow).join("")}
+          </tbody>
+        </table>
+      </div>`
+        )
+        .join("")}
+      ${cw.note ? `<p class="cw-note">${t(cw.note)}</p>` : ""}`
+  );
 
   const education = section(
     "education",
     "Education",
     visible(p.education)
       .map((e) => entry({ when: e.dates, heading: e.title, sub: e.detail }))
-      .join("") +
-      `<h3 class="minor">Selected coursework</h3>
-      <div class="courses">
-        ${cw.groups
-          .map(
-            (g) => `<div><p class="group">${esc(g.label)}</p><ul class="plain">${g.courses
-              .map(course)
-              .join("")}</ul></div>`
-          )
-          .join("")}
-      </div>
-      <p class="meta">${t(cw.note)}</p>`
+      .join("")
   );
 
   const honors = section(
@@ -187,11 +204,12 @@ export function render(p) {
     <main id="main">
       ${section("about", "About", `<p class="lead">${t(p.about)}</p>`)}
       ${now}
+      ${coursework}
+      ${skills}
+      ${honors}
+      ${education}
       ${research}
       ${projects}
-      ${education}
-      ${honors}
-      ${skills}
       <footer>
         <hr class="metal">
         <p>${t(p.personal)}</p>
