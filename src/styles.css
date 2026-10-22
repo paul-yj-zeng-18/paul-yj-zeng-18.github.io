@@ -1,24 +1,36 @@
-/* Silver / metallic, plain background. Two columns on desktop: a sticky rail
+/* Phoenix palette on a plain background. Two columns on desktop: a sticky rail
    for identity and navigation, a scrolling column for content. */
+/* Phoenix palette (from Paul's icon): lavender-white ground, aqua disc,
+   red -> orange -> peach plumage. */
 :root {
-  --bg: #f6f6f4;
-  --ink: #1d1e20;
-  --steel: #6c7076;
-  --hair: #dfe1e4;
-  --todo: #b4561f;
-  --metal: linear-gradient(90deg, #d8dbdf 0%, #9aa0a6 45%, #e3e5e8 100%);
+  --bg: #f3f3f9;
+  --ink: #1e2a30;
+  --steel: #6b7080;
+  --hair: #e1e2ee;
+  --aqua: #9af5f4;
+  --aqua-ink: #0f4f53;
+  --red: #c9361f;
+  --orange: #f29a49;
+  --peach: #f6dcb8;
+  --todo: #7b4fd1;
+  --metal: linear-gradient(90deg, #e8432f 0%, #f29a49 50%, #efc595 100%);
   --sans: "IBM Plex Sans", -apple-system, "Segoe UI", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0f1012;
-    --ink: #e7e8ea;
-    --steel: #9a9fa6;
-    --hair: #2a2c30;
-    --todo: #e39a6b;
-    --metal: linear-gradient(90deg, #5d6268 0%, #c4c8cd 50%, #6b7076 100%);
+    --bg: #0e1a1f;
+    --ink: #eaf3f3;
+    --steel: #93a5aa;
+    --hair: #20323a;
+    --aqua: #1f5f63;
+    --aqua-ink: #b6fbfa;
+    --red: #ff7a5c;
+    --orange: #f6a85e;
+    --peach: #3a2a1d;
+    --todo: #b99bff;
+    --metal: linear-gradient(90deg, #ff6a4d 0%, #f6a85e 50%, #f3d1a2 100%);
     color-scheme: dark;
   }
 }
@@ -55,14 +67,14 @@ a:focus-visible { outline: 2px solid var(--steel); outline-offset: 3px; border-r
 /* Rail */
 .rail { position: sticky; top: 72px; align-self: start; }
 .photo { border-radius: 50%; filter: grayscale(1); margin-bottom: 20px; }
-h1 { font-size: 30px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.15; margin: 0 0 10px; }
+h1 { color: var(--ink); font-size: 30px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.15; margin: 0 0 10px; }
 .headline { margin: 0; font-weight: 500; }
 .tagline { margin: 2px 0 0; color: var(--steel); }
 hr.metal { border: 0; height: 1px; background: var(--metal); margin: 28px 0; }
 .rail nav ul, .links { list-style: none; margin: 0; padding: 0; }
 .rail nav li { margin: 4px 0; }
 .rail nav a { font-family: var(--mono); font-size: 13px; color: var(--steel); text-transform: uppercase; letter-spacing: .08em; }
-.rail nav a:hover { color: var(--ink); }
+.rail nav a:hover { color: var(--red); }
 .links { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 28px; font-size: 14px; }
 
 /* Content */
@@ -83,7 +95,7 @@ p { margin: 0 0 8px; }
 .what h3 { font-size: 16px; font-weight: 600; margin: 0 0 2px; }
 .what p { font-size: 15px; }
 .sub { color: var(--steel); }
-.arrow { font-size: 12px; margin-left: 4px; color: var(--steel); }
+.arrow { font-size: 12px; margin-left: 4px; color: var(--orange); }
 
 .tags { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-wrap: wrap; gap: 4px 14px; font-family: var(--mono); font-size: 12px; color: var(--steel); }
 
@@ -101,11 +113,11 @@ ul.plain li::marker { color: var(--steel); }
 .cw-table tr { border-top: 1px solid var(--hair); }
 .cw-table tr:last-child { border-bottom: 1px solid var(--hair); }
 .cw-table th, .cw-table td { padding: 10px 0; vertical-align: baseline; text-align: left; font-weight: 400; }
-.cw-table .code { font-family: var(--mono); font-size: 14px; font-weight: 500; white-space: nowrap; width: 104px; padding-right: 16px; }
+.cw-table .code { font-family: var(--mono); font-size: 14px; font-weight: 500; color: var(--red); white-space: nowrap; width: 104px; padding-right: 16px; }
 .cw-table .name { font-size: 16px; }
 .cw-table .mark { text-align: right; white-space: nowrap; padding-left: 16px; }
-.grade { font-family: var(--mono); font-size: 17px; font-weight: 500; letter-spacing: .02em; }
-.inprog { font-family: var(--mono); font-size: 12px; color: var(--steel); }
+.grade { display: inline-block; min-width: 2.6em; text-align: center; font-family: var(--mono); font-size: 15px; font-weight: 600; letter-spacing: .02em; color: var(--aqua-ink); background: var(--aqua); border-radius: 999px; padding: 2px 10px; }
+.inprog { font-family: var(--mono); font-size: 12px; color: var(--ink); background: var(--peach); border-radius: 999px; padding: 2px 9px; }
 .cw-table tr.current .name { color: var(--steel); }
 .cw-note { font-size: 15px; font-weight: 500; padding: 12px 0 0; margin: 0; position: relative; }
 .cw-note::before { content: ""; display: block; width: 48px; height: 1px; background: var(--metal); margin-bottom: 12px; }
