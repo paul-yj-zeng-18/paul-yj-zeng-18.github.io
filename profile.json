@@ -140,17 +140,17 @@
           {
             "code": "Math 104",
             "name": "Real Analysis",
-            "grade": "TODO: grade"
+            "grade": "B+"
           },
           {
             "code": "Math 110",
             "name": "Abstract Linear Algebra",
-            "grade": "TODO: grade"
+            "grade": "A"
           },
           {
             "code": "Math 113",
             "name": "Abstract Algebra",
-            "grade": "TODO: grade"
+            "grade": "A"
           },
           {
             "code": "Math 126",
@@ -170,7 +170,7 @@
           {
             "code": "CS 61B",
             "name": "Data Structures",
-            "grade": "TODO: grade"
+            "grade": "A"
           },
           {
             "code": "CS 70",
